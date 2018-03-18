@@ -1,0 +1,27 @@
+body {
+  background-color: #e9967a;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+h1 {
+  text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+}
+
+div.maze {
+  float: left;
+  margin-right: 25px;
+}
+
+div.info {
+  width: 1000px;
+  padding: 50px;
+}

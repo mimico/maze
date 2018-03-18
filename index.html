@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link rel="stylesheet" href="styles.css">
+		<script src="maze.js"></script>
+		<title>Maze</title>
+	</head>
+
+	<body>
+		<h1>Maze</h1>
+		<div class="center">
+			<div class="maze">
+				<canvas id="canvasOne" width="300" height="300">
+					Your browser does not support HTML 5 Canvas.
+				</canvas>
+
+
+				<p>
+					<input type="button" value="Help" onClick="showHelp()"; name="help">
+					<input type="button" value="About" onClick="showAbout()"; name="about">
+				</p>
+			</div>
+
+			<div class="info">
+				Select your maze level using:<br /><br />
+				<input type="button" value="Easy" onClick="generateEasy()"; name="easy">
+				<input type="button" value="Medium" onClick="generateMedium()"; name="medium">
+				<input type="button" value="Hard" onClick="generateHard()"; name="hard">
+				<input type="button" value="Omg" onClick="generateOMG()"; name="omg">
+				<br /><br />
+        A new randomly generated maze is<br />
+				created every time you play.<br /><br />
+
+				Ages 4+<br /><br />
+  			</div>
+		</div>
+	</body>
+</html>
