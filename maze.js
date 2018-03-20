@@ -108,8 +108,8 @@ function canvasApp () {
       context.fillStyle = dude.colour;
       context.fillRect(dude.x, dude.y, dot_size / 2, dot_size / 2);
       if (!congrats) {
-        audio_win.play();
-        alert ('Congratulations!'); //yay!! The congrats variable additional alerts
+        setTimeout(audio_win.play(), 1000);
+        alert('Congratulations!');
         congrats = true;
       }
     }
