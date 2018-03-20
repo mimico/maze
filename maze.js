@@ -26,6 +26,8 @@ var size = width * dot_size;
 var visited; //array of visited state of each dot.
 var game_over = false;
 var congrats = false;
+var audio_step = new Audio('step.mp3');
+var audio_win = new Audio('tada.mp3');
 
 /* Test to see whether the window has loaded.
  * When it has, call eventWindowLoaded*/
@@ -106,6 +108,7 @@ function canvasApp () {
       context.fillStyle = dude.colour;
       context.fillRect(dude.x, dude.y, dot_size / 2, dot_size / 2);
       if (!congrats) {
+        audio_win.play();
         alert ('Congratulations!'); //yay!! The congrats variable additional alerts
         congrats = true;
       }
@@ -203,6 +206,7 @@ function canvasApp () {
       if (visited[dude.cell_x][dude.cell_y + 1]) {
         dude.y = dude.y + dot_size;
         dude.cell_y = dude.cell_y + 1;
+        audio_step.play();
         checkStatus();
       }
       break;
@@ -212,6 +216,7 @@ function canvasApp () {
     if (visited[dude.cell_x][dude.cell_y - 1]) {
       dude.y = dude.y - dot_size;
       dude.cell_y = dude.cell_y - 1;
+      audio_step.play();
       checkStatus ();
     }
     break;
@@ -221,6 +226,7 @@ function canvasApp () {
     if (!game_over && visited[dude.cell_x - 1][dude.cell_y]) {
       dude.x = dude.x - dot_size;
       dude.cell_x = dude.cell_x - 1;
+      audio_step.play();
       checkStatus();
     }
     break;
@@ -230,6 +236,7 @@ function canvasApp () {
     if (visited[dude.cell_x + 1][dude.cell_y]) {
       dude.x = dude.x + dot_size;
       dude.cell_x = dude.cell_x + 1;
+      audio_step.play();
       checkStatus();
     }
     break;
