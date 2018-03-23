@@ -206,6 +206,7 @@ function canvasApp () {
       if (visited[dude.cell_x][dude.cell_y + 1]) {
         dude.y = dude.y + dot_size;
         dude.cell_y = dude.cell_y + 1;
+        audio_step.currentTime = 0;
         audio_step.play();
         checkStatus();
       }
