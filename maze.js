@@ -108,9 +108,9 @@ function canvasApp () {
       context.fillStyle = dude.colour;
       context.fillRect(dude.x, dude.y, dot_size / 2, dot_size / 2);
       if (!congrats) {
-        setTimeout(audio_win.play(), 1000);
-        alert('Congratulations!');
         congrats = true;
+        audio_win.play();
+        setTimeout(function(){alert('Congratulations!')}, 500);
       }
     }
   } //end drawscreen
